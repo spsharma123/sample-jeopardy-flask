@@ -15,7 +15,10 @@ app.secret_key = b'HO\xf8\xff+\n\x1e\\~/;}'
 @app.route('/index')
 def index():
     session['username'] = 'bob'
-    return render_template('index.html')
+    data = {
+        
+    }
+    return render_template('index.html', data=data)
 @app.route('/random')
 def random_clue():
     clue = model.random_clue()
